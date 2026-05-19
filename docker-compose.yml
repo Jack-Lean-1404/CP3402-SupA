@@ -7,6 +7,8 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
 
   wordpress:
     image: wordpress:latest
@@ -26,3 +28,6 @@ services:
 
     depends_on:
       - db
+      
+volumes:
+  db_data:
