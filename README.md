@@ -83,3 +83,33 @@ View running containers:
 ``` Bash
 docker ps
 ```
+
+# 4.0 Enviroment Configuration
+
+The repository already includes the required local development environment configuration.
+
+No additional environment variable setup is required for standard local development.
+
+If environment variables need to be changed in future, they are stored in:
+
+```docker-compose.local.yml ```
+
+# 5.0 Local Wordpress Site Setup
+Ensure containers are running before opening local site.
+
+Local Site: ```localhost:8080```
+
+Local Site Admin: ```localhost:8080/wp-admin/```
+
+## 5.1 Activate the project theme
+
+Inside WordPress Admin:
+
+```Appearance -> Themes```
+
+Activate:
+
+```neve-fse-chile```
+
+This is CP3402-SupA's custom child theme
+
