@@ -25,6 +25,6 @@ body {
     display: inline-block;
 }
 /* Remove top margin from cover block on hero imge */
-.wp-block-post-content p {
+:where(.wp-site-blocks) > * {
     margin-block-start: 0;
 }

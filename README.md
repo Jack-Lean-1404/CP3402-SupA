@@ -97,9 +97,9 @@ If environment variables need to be changed in future, they are stored in:
 # 5.0 Local Wordpress Site Setup
 Ensure containers are running before opening local site.
 
-Local Site: ```localhost:8080```
+Local Site: [localhost:8080](localhost:8080)
 
-Local Site Admin: ```localhost:8080/wp-admin/```
+Local Site Admin: [localhost:8080/wp-admin/](localhost:8080/wp-admin/)
 
 ## 5.1 Activate the project theme
 
