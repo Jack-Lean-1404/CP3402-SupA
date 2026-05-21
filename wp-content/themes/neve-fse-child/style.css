@@ -28,3 +28,16 @@ body {
 :where(.wp-site-blocks) > * {
     margin-block-start: 0;
 }
+
+/* Hide post content on the homepage */
+.home .wp-block-post-content {
+    display: none;
+}
+
+/* Create white a card style for all comment block */
+.wp-block-comments-query-loop {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
