@@ -5,5 +5,39 @@ Version: 1.0
 */
 
 body {
-    background-color: #455bda;
+    background-color: #f5f5f5;
+}
+
+/* Style for post featured images */
+.wp-block-post-featured-image img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Style for post terms (categories and tags) */
+.wp-block-post-terms a {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+/* Remove top margin from cover block on hero imge */
+:where(.wp-site-blocks) > * {
+    margin-block-start: 0;
+}
+
+/* Hide post content on the homepage */
+.home .wp-block-post-content {
+    display: none;
+}
+
+/* Create white a card style for all comment block */
+.wp-block-comments-query-loop {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
