@@ -4,11 +4,7 @@
 
 This project is a custom WordPress website developed for U3A using a block-based Full Site Editing (FSE) workflow. The site uses a custom child theme built on top of the Neve FSE parent theme and is developed locally using Docker before being deployed to production.
 
-## Deployment
-
-## Theme Development
-
-
+# Deployment
 
 ## 1.0 Install Required Tools
 
@@ -165,7 +161,7 @@ volumes:
 ```
 
 
-## 7.0 Automated Deployment Workflow
+## 9.0 Automated Deployment Workflow
 
 A Continuous Deployment (CD) workflow was implemented using GitHub Actions.
 
@@ -194,7 +190,7 @@ Production Website Updated
 ```
 
 
-### 7.1 SSH Authentication
+### 9.1 SSH Authentication
 
 SSH key authentication was configured between GitHub Actions and the AWS EC2 server.
 
@@ -213,7 +209,7 @@ The following repository secrets were configured:
 
 ---
 
-### 7.2 GitHub Actions Workflow Configuration
+### 9.2 GitHub Actions Workflow Configuration
 
 A GitHub Actions workflow file was created within:
 
@@ -251,3 +247,85 @@ jobs:
             git pull
             sudo docker compose restart
 ```
+
+# Theme Development
+
+## 1.0 Child Theme Structure
+
+The child theme is located in:
+
+```text
+wp-content/themes/neve-fse-child/
+```
+
+Current structure:
+
+```text
+neve-fse-child/
+├── style.css
+```
+
+As the project grows, additional files and folders may be added.
+
+Recommended future structure:
+
+```text
+neve-fse-child/
+├── style.css
+├── functions.php
+├── templates/
+├── parts/
+└── assets/
+```
+
+---
+
+## 2.0 Editing Styles
+
+All custom CSS styling should be added inside:
+
+```text
+wp-content/themes/neve-fse-child/style.css
+```
+
+To modify the appearance of the website:
+
+1. Open `style.css`
+2. Add or edit CSS rules
+3. Save the file
+4. Refresh the WordPress site
+
+---
+
+## 3.0 Adding New CSS
+
+New CSS should always be added to the bottom of the stylesheet.
+
+Recommended formatting:
+
+```css
+/* change title or description */
+
+.site-footer {
+    padding: 40px;
+}
+```
+
+Using section comments improves readability and maintainability for future developers.
+
+---
+
+## 5.0 Best Practices
+
+### Do Not Edit the Parent Theme
+
+Never modify files inside:
+
+```text
+wp-content/themes/neve-fse/
+```
+
+All project-specific changes should remain inside the child theme.
+
+Updating the parent theme may overwrite direct modifications.
+
